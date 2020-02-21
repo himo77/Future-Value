@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMonthlyInvestment = new System.Windows.Forms.TextBox();
+            this.txtMonthlyInvestement = new System.Windows.Forms.TextBox();
             this.txtInterestRate = new System.Windows.Forms.TextBox();
             this.txtYears = new System.Windows.Forms.TextBox();
             this.txtFutureValue = new System.Windows.Forms.TextBox();
@@ -81,12 +81,13 @@
             this.label4.Text = "Future Value:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtMonthlyInvestment
+            // txtMonthlyInvestement
             // 
-            this.txtMonthlyInvestment.Location = new System.Drawing.Point(602, 63);
-            this.txtMonthlyInvestment.Name = "txtMonthlyInvestment";
-            this.txtMonthlyInvestment.Size = new System.Drawing.Size(191, 31);
-            this.txtMonthlyInvestment.TabIndex = 4;
+            this.txtMonthlyInvestement.Location = new System.Drawing.Point(602, 63);
+            this.txtMonthlyInvestement.Name = "txtMonthlyInvestement";
+            this.txtMonthlyInvestement.Size = new System.Drawing.Size(191, 31);
+            this.txtMonthlyInvestement.TabIndex = 4;
+            this.txtMonthlyInvestement.TextChanged += new System.EventHandler(this.ClearFutureValue);
             // 
             // txtInterestRate
             // 
@@ -94,6 +95,7 @@
             this.txtInterestRate.Name = "txtInterestRate";
             this.txtInterestRate.Size = new System.Drawing.Size(190, 31);
             this.txtInterestRate.TabIndex = 5;
+            this.txtInterestRate.TextChanged += new System.EventHandler(this.ClearFutureValue);
             // 
             // txtYears
             // 
@@ -110,6 +112,7 @@
             this.txtFutureValue.Size = new System.Drawing.Size(191, 31);
             this.txtFutureValue.TabIndex = 7;
             this.txtFutureValue.TabStop = false;
+            this.txtFutureValue.TextChanged += new System.EventHandler(this.txtFutureValue_TextChanged);
             // 
             // btnCalculate
             // 
@@ -143,7 +146,7 @@
             this.Controls.Add(this.txtFutureValue);
             this.Controls.Add(this.txtYears);
             this.Controls.Add(this.txtInterestRate);
-            this.Controls.Add(this.txtMonthlyInvestment);
+            this.Controls.Add(this.txtMonthlyInvestement);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -162,7 +165,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMonthlyInvestment;
+        private System.Windows.Forms.TextBox txtMonthlyInvestement;
         private System.Windows.Forms.TextBox txtInterestRate;
         private System.Windows.Forms.TextBox txtYears;
         private System.Windows.Forms.TextBox txtFutureValue;
